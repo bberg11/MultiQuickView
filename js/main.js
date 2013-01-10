@@ -35,6 +35,15 @@ $(document).ready(function(){
         }
         else{
             $('.wrapper').removeClass('in-quickview');
-        };
+        }
     });
+
+    //Quickview hover
+    $('.thumbnails li').hover(
+        function(){
+            $(this).addClass("hover");
+        },
+        function () {
+            $(this).removeClass("hover");
+        });
 });
