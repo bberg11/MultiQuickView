@@ -1,13 +1,16 @@
 $(document).ready(function(){
     //Create quickview and insert it into document
     $('a.product').click(function(e) {
-       var quickview = $('<div />').addClass('quickview'),
+       var count = $('.quickview').length,
+           quickview = $('<div />').addClass('quickview'),
            quickviewContent = $('<span />').addClass('content'),
            quickviewClose = $('<span />').addClass('close').text('X');
 
-        $(quickviewClose).appendTo(quickview);
-        $(quickviewContent).appendTo(quickview);
-        $(quickview).appendTo('.quickview-container');
+        if (count < 3) {
+            $(quickviewClose).appendTo(quickview);
+            $(quickviewContent).appendTo(quickview);
+            $(quickview).appendTo('.quickview-container');
+        };
 
         var url = $(this).attr('href');
         $(quickviewContent).load(url, function(){});
