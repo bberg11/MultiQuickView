@@ -9,292 +9,211 @@
         <title>Product Browse Experiment: Multiple Quick View</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/bootstrap/main.css">
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <div class="container wrapper clearfix">
-                        <!-- Start Header-->
-            <div class="row-fluid">
-                <div class="span4 logo">
+        <div class="wrapper clearfix">
+            <div class="header clearfix">
+                <div class="utility">
+                    <ul class="utility-nav clearfix">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="cart clearfix">
+                    <a href="#">Shopping Cart (5)</a>
+                </div>
+                <div class="logo">
                     <a href="index.html">
                         <h1>WebLinc Direct</h1>
                     </a>
                 </div>
-                <div class="span8">
-                    <div class="row-fluid">
-                        <div class="span8">&nbsp;</div>
-                        <div class="span4">
-                            <a href="cart.html"><h4>Shopping Cart (5)</h4></a>
-                            <a href="cart.html">2 items - $50.00 </a>
-                        </div>
-                    </div>
-                    <br/>
-                    <div class="row-fluid">
-                        <div class="link pull-right">
-                            <a href="index.html">Home</a> |
-                            <a href="my_account.html">My Account</a> |
-                            <a href="cart.html">Shopping Cart</a> |
-                            <a href="about.html">About</a> |
-                            <a href="contact.html">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Header-->
-
-            <!-- Start Navigation -->
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <div class="container" style="width: auto;">
-                                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </a>
-                                <div class="nav-collapse">
-                                    <ul class="nav">
-                                        <li><a href="category.html">Category One</a></li>
-                                        <li><a href="category.html">Category Two</a></li>
-                                        <li><a href="category.html">Category Three</a></li>
-
-                                    </ul>
-                                    <ul class="nav  pull-right">
-                                        <li class="divider-vertical"></li>
-                                        <form class="navbar-search" method="get" action="">
-                                            <input class="search-query  span2" placeholder="search" type="text"/>
-                                            <button class="btn btn-primary btn-small" type="submit">Go</button>
-                                        </form>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Navigation -->
-            <div class="row-fluid">
-                <div class="span3">
-                    <!-- start sidebar -->
-                    <ul class="breadcrumb">
-                        <li><span>Categories</span></li>
+                <a href="#" class="menu">Menu</a>
+                <div class="navigation clearfix">
+                    <ul class="primary-nav clearfix">
+                        <li><a href="#">Cateogry One</a></li>
+                        <li><a href="#">Cateogry Two</a></li>
+                        <li><a href="#">Cateogry Three</a></li>
                     </ul>
-                    <div class="product_list">
-                        <ul class="nav">
-                            <li>
-                                <a class="active" href="category.html">Category One</a>
-                                <ul>
-                                    <li><a href="listing.html"> - Sub-Category One</a></li>
-                                    <li><a href="listing.html"> - Sub-Category Two</a></li>
-                                    <li><a href="listing.html"> - Sub-Category Three</a></li>
-                                </ul>
+                </div>
+                <form class="search clearfix" method="get" action="">
+                    <input placeholder="search" type="text"/>
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+
+            <div class="content clearfix">
+                <div class="main-content clearfix">
+                    <ul class="breadcrumbs clearfix">
+                        <li><a href="#">Home</a></li>
+                        <li class="active"><a href="#">Category One</a></li>
+                    </ul>
+
+                    <div class="product-container clearfix">
+                        <ul class="products clearfix">
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-1.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 1</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
                             </li>
-
-                            <li><a href="category.html">Category Two</a></li>
-                            <li><a href="category.html">Category Three</a></li>
-                            <li><a href="category.html">Category Four</a></li>
-
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-2.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 2</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-3.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 3</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-4.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 4</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-5.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 5</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-6.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 6</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-7.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 7</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-8.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 8</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-9.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 9</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-10.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 10</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-11.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 11</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
+                            <li class="product clearfix">
+                                <div class="media clearfix">
+                                    <a href="products/product-12.html" class="product-image"><img alt="" src="img/image_placeholder.png" /></a>
+                                </div>
+                                <div class="info clearfix">
+                                    <h5 class="name">Product 12</h5>
+                                </div>
+                                <span class="quickview-trigger">Quickview</span>
+                            </li>
                         </ul>
                     </div>
-                    <!-- end sidebar -->        
                 </div>
-                <div class="span9">
-                    <ul class="breadcrumb">
+
+                <div class="sidebar clearfix">
+                    <ul class="secondary-nav clearfix">
                         <li>
-                            <a href="#">Home</a> <span class="divider">/</span>
+                            <a class="active" href="#">Category One</a>
+                            <ul>
+                                <li><a href="#"> - Sub-Category One</a></li>
+                                <li><a href="#"> - Sub-Category Two</a></li>
+                                <li><a href="#"> - Sub-Category Three</a></li>
+                            </ul>
                         </li>
-                        <li class="active">
-                            <a href="#">Category One</a>
-                        </li>
-                    </ul>
-
-
-                    <div class="row-fluid">
-                        <!-- start categories -->
-                        <ul class="thumbnails">
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-1.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 1</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-2.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 2</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-3.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 3</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-4.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 4</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-5.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 5</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-6.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 6</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-1.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 7</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-2.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 8</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-3.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 9</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-4.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 10</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-5.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 11</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail">
-                                    <a href="products/product-6.html" class="product">
-                                        <img alt="" src="img/image_placeholder.png" />
-                                        <span class="quickview-trigger">Quickview</span>
-                                    </a>
-                                    <div class="caption">
-                                        <h5>Product 12</h5>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- end categories -->
-                    </div>
+                        <li><a href="#">Category Two</a></li>
+                        <li><a href="#">Category Three</a></li>
+                        <li><a href="#">Category Four</a></li>
+                    </ul>       
                 </div>
-
             </div>
 
-
-            <footer>
-                <hr>
-                <div class="row-fluid well no_margin_left">
-
-                    <div class="span3">
-                        <h4>Information</h4>
-                        <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="about.html">Delivery Information</a></li>
-                            <li><a href="about.html">Privacy Policy</a></li>
-                            <li><a href="about.html">Terms &amp; Conditions</a></li>
-                        </ul>
-                    </div>
-                    <div class="span3">
-                        <h4>Customer Service</h4>
-                        <ul>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="about.html">Returns</a></li>
-                            <li><a href="about.html">Site Map</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="span3">
-                        <h4>My Account</h4>
-                        <ul>
-                            <li><a href="my_account.html">My Account</a></li>
-                            <li><a href="about.html">Order History</a></li>
-
-                            <li><a href="about.html">Newsletter</a></li>
-                        </ul>
-                    </div>
-
+            <div class="footer clearfix">
+                <div class="info section clearfix">
+                    <h4>Information</h4>
+                    <ul class="clearfix">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
                 </div>
-            </footer>
+                <div class="customer-service section clearfix">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+                <div class="account section clearfix">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+
         <div class="quickview-container"></div>
 
         <script src="js/vendor/jquery-1.8.2.min.js"></script>

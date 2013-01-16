@@ -93,69 +93,284 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {}
-.wrapper {
+/*Base Styles*/
+body {
+    color: #333;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/*Layout Styles*/
+.wrapper {
+    padding: 10px;
+    min-width: 300px;
 }
 .wrapper.in-quickview {
     width: 48%;
     margin: 1%;
 }
-    .in-quickview .thumbnails li {
-        width: 29%;
+
+.header {}
+    .header .utility {
+        border-bottom: 1px solid #333;
     }
-    .quickview-container {
+        .header .utility ul {
+            text-align: center;
+        }
+            .header .utility ul li {
+                display: inline-block;
+                padding: 4px;
+                font-size: 0.750em;
+            }
+    .header .cart {
+        text-align: center;
+        font-variant: small-caps;
+    }
+    .header .logo {
+        text-align: center;
+        font-variant: small-caps;
+    }
+    .header .menu {
+        display: inline-block;
+        padding: 5px 7px 7px;
+        background: #333;
+        color: #fff;
+    }
+    .header .primary-nav {
         display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 48%;
-        height: 100%;
     }
-        .quickview .product-detail { display: none; }
-    .qv-count-1 .quickview-container,
-    .qv-count-2 .quickview-container,
-    .qv-count-3 .quickview-container {
+    .header .active .primary-nav {
         display: block;
     }
-        .quickview {
-            border: 1px solid #000;
+    .header .search {
+        margin-top: -30px;
+        float: right;
+    }
+        .header .search input {
+            width: 150px;
         }
-        .qv-count-1 .quickview {
-            height: 100%;
-            background: #fff url(../img/quickview-large.jpg) center center no-repeat;
+.content {}
+    .content .main-content {
+        padding: 10px 0;
+    }
+        .content .main-content .breadcrumbs li {
+            padding: 10px 5px 10px 0;
+            float: left;
+            font-size: 0.625em;
         }
-        .qv-count-2 .quickview {
-            height: 50%;
-            background: #fff url(../img/quickview-medium.jpg) center center no-repeat;
+        .content .main-content .breadcrumbs li:after {
+            content: "  :"
         }
-        .qv-count-3 .quickview {
-            height: 33%;
-            background: #fff url(../img/quickview-small.jpg) center center no-repeat;
+        .content .main-content .breadcrumbs li.active:after {
+            content: "";
         }
+        .content .main-content .breadcrumbs li.active a {
+            color: #999;
+        }
+        .content .main-content .products {}
+            .content .main-content .products .product {
+                display: block;
+                position: relative;
+                margin: 0 1%;
+                width: 48%;
+                float: left;
+                text-align: center;
+            }
+                .content .main-content .products .product .quickview-trigger {
+                    display: none;
+                    text-align: center;
+                }
+                .content .main-content .products .product.hover .quickview-trigger:hover {
+                    cursor: pointer;
+                }
 
-.caption h5 {
-    color: #333;
-}
-
-.thumbnail {
-    position: relative;
-}
-    .thumbnail .quickview-trigger {
-        display: none;
+    .content .sidebar {
+        padding: 1em 0;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+        .content .sidebar .secondary-nav {}
+            .content .sidebar .secondary-nav .active {
+                font-weight: bold;
+            }
+            .content .sidebar .secondary-nav ul {
+                margin: 0 0 0 1em;
+            }
+.footer {}
+    .footer .section {
         text-align: center;
     }
-    .hover .thumbnail .quickview-trigger {
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 35px;
-        height: 35px;
-        background: url(../img/quickview.png) no-repeat;
-        text-indent: -9999px;
-        direction: ltr;
+
+.quickview-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+}
+.qv-count-1 .quickview-container,
+.qv-count-2 .quickview-container,
+.qv-count-3 .quickview-container {
+    display: block;
+}
+    .quickview {
+        border: 1px solid #000;
     }
+        .quickview .close {
+            margin: 10px;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 18px;
+            color: #000000;
+            text-shadow: 0 1px 0 #ffffff;
+            opacity: 0.2;
+            filter: alpha(opacity=20);
+        }
+        .quickview .close:hover {
+            cursor: pointer;
+        }
+        .quickview .product-detail { display: none; }
+    .qv-count-1 .quickview {
+        height: 100%;
+        background: #fff url(../img/quickview-large.jpg) center center no-repeat;
+    }
+    .qv-count-2 .quickview {
+        height: 50%;
+        background: #fff url(../img/quickview-medium.jpg) center center no-repeat;
+    }
+    .qv-count-3 .quickview {
+        height: 33%;
+        background: #fff url(../img/quickview-small.jpg) center center no-repeat;
+    }
+
+/* ==========================================================================
+   Small Screen
+   ========================================================================== */
+@media screen and (min-width: 600px) {
+    .header .utility {
+        padding: 5px 0;
+        width: 60%;
+        float: left;
+        font-size: 0.750em;
+    }
+        .header .utility ul li {
+            padding: 0 4px;
+            font-size: 1em;
+        }
+    .header .cart {
+        padding: 5px 0;
+        width: 40%;
+        float: right;
+        font-size: 0.750em;
+        font-variant: normal;
+        text-align: right;
+        border-bottom: 1px solid #333;
+    }
+    .header .menu {
+        display: none;
+    }
+    .header .navigation {
+        width: 60%;
+        float: left;
+    }
+        .header .primary-nav {
+            display: block;
+            text-align: center;
+        }
+            .header .primary-nav li {
+                display: inline-block;
+                padding: 0 10px 0 0;
+            }
+    .header .search {
+        margin: 0;
+        width: 40%;
+        float: right;
+        text-align: right;
+    }
+
+    .footer .section {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+/* ==========================================================================
+   Mid-Sized
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    .header .utility ul {
+        text-align: left;
+    }
+    .header .primary-nav {
+        text-align: left;
+    }
+
+    .content .main-content {
+        width: 66.66%;
+        float: right;
+    }
+        .content .main-content .breadcrumbs {
+            margin-left: 5%;
+            height: 40px;
+        }
+    .content .sidebar {
+        margin-top: 20px;
+        padding: 0;
+        width: 33.33%;
+        float: left;
+        border: none;
+    }
+}
+
+/* ==========================================================================
+   Full-Width
+   ========================================================================== */
+@media screen and (min-width: 975px) {
+    .wrapper {
+        margin: 0 auto;
+        max-width: 955px;
+    }
+
+    .content .main-content {
+        width: 80%;
+    }
+        .content .main-content .products .product {
+            width: 31%;
+        }
+            .content .main-content .products .product.hover .quickview-trigger {
+                display: block;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 35px;
+                height: 35px;
+                background: url(../img/quickview.png) no-repeat;
+                text-indent: -9999px;
+                direction: ltr;
+            }
+    .content .sidebar {
+        width: 20%;
+    }
+}
 
 /* ==========================================================================
    Helper classes
@@ -256,21 +471,6 @@ body {}
 
 .clearfix {
     *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================

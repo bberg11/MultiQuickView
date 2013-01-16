@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //Create quickview and insert it into document
-    $('a.product').click(function(e) {
+    $('.quickview-trigger').click(function() {
        var count = $('.quickview').length,
            quickview = $('<div />').addClass('quickview'),
            quickviewContent = $('<span />').addClass('content'),
@@ -10,12 +10,10 @@ $(document).ready(function(){
             $(quickviewClose).appendTo(quickview);
             $(quickviewContent).appendTo(quickview);
             $(quickview).appendTo('.quickview-container');
-        };
+        }
 
         var url = $(this).attr('href');
         $(quickviewContent).load(url, function(){});
-
-        e.preventDefault();
     });
 
     //Close quickview on clicking "close"
@@ -24,7 +22,7 @@ $(document).ready(function(){
     });
 
     //Count quickviews and apply applicable classes
-    $('.close, a.product').live('click', function(){
+    $('.close, .quickview-trigger').live('click', function(){
         //Count how many elements have a class of .quickview
         var count = $('.quickview').length;
 
@@ -42,7 +40,7 @@ $(document).ready(function(){
     });
 
     //Quickview hover
-    $('.thumbnails li').hover(
+    $('.product').hover(
         function(){
             $(this).addClass("hover");
         },
